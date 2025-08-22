@@ -1,6 +1,185 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  background: #f9f9f9;
+  color: #333;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+}
+.logo span {
+  color: #ff4d4d;
+}
+
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #ff4d4d;
+}
+
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background: #f1f1f1;
+}
+.search-box input {
+  border: none;
+  background: transparent;
+  padding: 5px;
+  outline: none;
+  width: 150px;
+}
+.search-box button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.cart {
+  position: relative;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: #ff4d4d;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+
+.hamburger {
+  display: none;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1542291026-7eec264c27ff') no-repeat center/cover;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff4d4d;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.btn-cta:hover {
+  background: #e63939;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .nav.active {
+    display: block;
+  }
+  .nav-links {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .search-box input {
+    width: 100px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .btn-cta {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
 }
