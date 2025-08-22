@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Commerce Site</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/lucide@latest"></script> 
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
  
@@ -14,7 +14,7 @@
     <nav class="nav">
       <ul class="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
+        <li><a href="#products">Products</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -43,9 +43,18 @@
     </div>
   </section>
 
+  
+  <section class="products" id="products">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="product-grid" id="product-grid">
+     
+      <div class="loading-spinner"></div>
+    </div>
+  </section>
+
   <script src="scripts/app.js"></script>
   <script>
-    lucide.createIcons(); 
+    lucide.createIcons();
   </script>
 </body>
 </html>
