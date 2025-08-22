@@ -49,7 +49,7 @@ async function loadProducts() {
     displayProducts(products);
   } catch (error) {
     console.error("Error loading products:", error);
-    productGrid.innerHTML = `<p class="error-message">⚠️ Failed to load products. Please try again later.</p>`;
+    productGrid.innerHTML = `<p class="error-message"> Failed to load products. Please try again later.</p>`;
   }
 }
 
